@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
             <h4 className="text-xl font-bold mb-4">Edgar Rivera</h4>
-            <p className="text-gray-400">Backend Developer & Blockchain Specialist</p>
+            <p className="text-gray-400">full-stack developer specialized in blockchain and web applications</p>
           </div>
           <div className="text-center">
             <h4 className="text-xl font-bold mb-4">{t('technologiesUsed')}</h4>

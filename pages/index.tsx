@@ -140,18 +140,18 @@ const Home: React.FC<HomeProps> = ({ githubProjects }) => {
       link: "https://scicodehub1-nfyy.vercel.app/",
     },
     {
-      title: "Pokeejemplo API",
+      title: "Pokedex",
       description: "API RESTful para datos de Pokémon.",
       link: "https://pokeejemploapi.vercel.app/",
     },
     {
-      title: "Optimia Nine",
-      description: "Herramienta de análisis de datos financieros.",
+      title: "Optimia",
+      description: "Herramienta de análisis de datos sobre medicinas en mexico.",
       link: "https://optimia-nine.vercel.app/",
     },
     {
       title: "DocTokens",
-      description: "Plataforma para la gestión de documentos digitales.",
+      description: "Plataforma para la gestión de documentos digitales atravez de blockchain.",
       link: "https://doctokens-zbvn.vercel.app/",
     },
     {
@@ -169,105 +169,57 @@ const Home: React.FC<HomeProps> = ({ githubProjects }) => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
-      <main className="container mx-auto px-4 py-8">
-        {/* Sección Sobre Mí - Ahora al inicio */}
+      <main className="container mx-auto px-4 pt-24 pb-8">
+        {/* Sección Sobre Mí */}
         <section id="sobre-mi" className="mb-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               {t('hello')}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
               {t('fullStackDeveloper')}
             </p>
           </div>
-          <div className="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300 text-center">
+          <div className="max-w-3xl mx-auto text-base md:text-lg text-gray-700 dark:text-gray-300 text-center px-4">
             <p>{t('sobreM')}</p>
           </div>
         </section>
 
         {/* Sección de Tecnologías */}
         <section id="tecnologias" className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              {t('Tecnologias')}
+              {t('technologies')}
             </span>
           </h2>
           
-          {/* Frontend Technologies */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">{t('frontend')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-              {getTechnologiesByCategory('frontend').map((tech, index) => (
-                <TechnologyCard key={index} {...tech} />
-              ))}
-            </div>
-          </div>
-
-          {/* Backend Technologies */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">{t('backend')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-              {getTechnologiesByCategory('backend').map((tech, index) => (
-                <TechnologyCard key={index} {...tech} />
-              ))}
-            </div>
-          </div>
-
-          {/* Database Technologies */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">{t('databases')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-              {getTechnologiesByCategory('database').map((tech, index) => (
-                <TechnologyCard key={index} {...tech} />
-              ))}
-            </div>
-          </div>
-
-          {/* Development Tools */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">{t('developmentTools')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-              {getTechnologiesByCategory('tools').map((tech, index) => (
-                <TechnologyCard key={index} {...tech} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sección Proyectos Destacados */}
-        <section id="proyectos" className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 relative">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              {t('featuredProjects')}
-            </span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {proyectosDestacados.map((proyecto: Proyecto, index: number) => (
-              <ProjectCard
-                key={index}
-                title={proyecto.title}
-                description={proyecto.description}
-                link={proyecto.link}
-              />
+          {/* Grid de tecnologías */}
+          <div className="space-y-8">
+            {['frontend', 'backend', 'database', 'tools'].map((category) => (
+              <div key={category} className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4">{t(category)}</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8">
+                  {getTechnologiesByCategory(category as any).map((tech, index) => (
+                    <TechnologyCard key={index} {...tech} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* Sección GitHub Projects */}
-        <section id="github" className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 relative">
+        {/* Proyectos Destacados */}
+        <section id="proyectos" className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              {t('moreProjects')}
+              {t('featuredProjects')}
             </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {githubProjects.map((proyecto, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {proyectosDestacados.map((proyecto, index) => (
               <ProjectCard
                 key={index}
-                title={proyecto.title}
-                description={proyecto.description}
-                image={proyecto.image}
-                link={proyecto.link}
+                {...proyecto}
               />
             ))}
           </div>
@@ -275,7 +227,7 @@ const Home: React.FC<HomeProps> = ({ githubProjects }) => {
 
         {/* Sección Contacto */}
         <section id="contacto" className="mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12 relative">
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
               {t('contact')}
             </span>
@@ -283,7 +235,7 @@ const Home: React.FC<HomeProps> = ({ githubProjects }) => {
           <div className="flex flex-col items-center space-y-6">
             <a
               href="mailto:edgarafedo123@gmail.com"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:opacity-90 transition-opacity text-center"
             >
               {t('sendEmail')}
             </a>
