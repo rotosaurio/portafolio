@@ -299,19 +299,19 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const response = await fetch("https://api.github.com/users/rotosaurio/repos");
   const data = await response.json();
 
-  const githubProjects: Project[] = data.map((repo: any) => ({
+  const githubProjects = data.map((repo: any) => ({
     title: repo.name,
     description: repo.description || "Sin descripción",
-    image: repo.owner.avatar_url, // Considera reemplazar con imágenes específicas de cada proyecto
+    image: repo.owner.avatar_url,
     link: repo.html_url,
   }));
 
   return {
     props: {
-      ...(await serverSideTranslations(locale || 'es', ['common'], nextI18NextConfig)),
+      ...(await serverSideTranslations(locale ?? 'es', ['common'])),
       githubProjects,
     },
-    revalidate: 3600, // Revalidar cada hora
+    revalidate: 3600,
   };
 };
 
