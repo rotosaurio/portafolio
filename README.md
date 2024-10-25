@@ -10,6 +10,7 @@ Este es el portafolio personal de Edgar Alfredo Rivera Díaz, desarrollador full
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Solana](https://solana.com/)
 - [Ethereum](https://ethereum.org/)
+- [next-i18next](https://github.com/isaachinman/next-i18next)
 
 ## Despliegue
 
