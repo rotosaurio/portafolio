@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import nextI18NextConfig from '../next-i18next.config.js';
+import nextI18NextConfig from '../next-i18next.config';
 import { useTranslation } from 'next-i18next';
 import TechnologyCard from "@/components/TechnologyCard";
 
