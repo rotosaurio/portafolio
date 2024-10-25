@@ -170,6 +170,21 @@ const Home: React.FC<HomeProps> = ({ githubProjects }) => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
       <main className="container mx-auto px-4 py-8">
+        {/* Sección Sobre Mí - Ahora al inicio */}
+        <section id="sobre-mi" className="mb-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-4">
+              {t('hello')}
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              {t('fullStackDeveloper')}
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300 text-center">
+            <p>{t('sobreM')}</p>
+          </div>
+        </section>
+
         {/* Sección de Tecnologías */}
         <section id="tecnologias" className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">

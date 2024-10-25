@@ -20,10 +20,13 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link href="#proyectos">{t('featuredProjects')}</Link>
+              <Link href="#sobre-mi">{t('aboutMe')}</Link>
             </li>
             <li>
-              <Link href="#sobre-mi">{t('aboutMe')}</Link>
+              <Link href="#tecnologias">{t('technologies')}</Link>
+            </li>
+            <li>
+              <Link href="#proyectos">{t('featuredProjects')}</Link>
             </li>
             <li>
               <Link href="#contacto">{t('contact')}</Link>
