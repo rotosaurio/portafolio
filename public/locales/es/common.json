@@ -14,7 +14,6 @@
   "exploreProjects": "Explora mis proyectos",
   "technologies": "Tecnologías",
   "rights": "Todos los derechos reservados.",
-  "sobreM": "Desarrollador backend especializado en arquitecturas escalables y tecnologías blockchain...",
   "frontend": "Frontend",
   "backend": "Backend",
   "databases": "Bases de Datos",
@@ -23,5 +22,6 @@
   "seeGithub": "Ver en GitHub",
   "contactVia": "Contáctame vía",
   "projectsSection": "Sección de Proyectos",
-  "technologiesSection": "Sección de Tecnologías"
+  "technologiesSection": "Sección de Tecnologías",
+  "sobreM": "Soy Edgar Alfredo Rivera Díaz, desarrollador full-stack con experiencia en el desarrollo de aplicaciones web y contratos inteligentes en las redes blockchain de Solana y Ethereum. Apasionado por la tecnología y siempre buscando nuevas formas de innovar y resolver problemas complejos. He participado en hackathones de alto nivel, incluyendo el NASA SpaceApps Challenge y eventos enfocados en blockchain e inteligencia artificial, lo que me ha permitido expandir mis conocimientos y habilidades en programación y desarrollo de software."
 }

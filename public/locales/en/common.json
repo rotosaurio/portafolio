@@ -1,6 +1,6 @@
 {
   "hello": "Hello, I'm Edgar Rivera",
-  "fullStackDeveloper": "Full-Stack Developer specialized in blockchain and web applications.",
+  "fullStackDeveloper": "Backend Developer & Blockchain Specialist",
   "featuredProjects": "Featured Projects",
   "moreProjects": "More Projects on GitHub",
   "aboutMe": "About Me",
@@ -13,8 +13,7 @@
   "github": "GitHub",
   "exploreProjects": "Explore my projects",
   "technologies": "Technologies",
-  "rights": "All rights reserved.",
-  "sobreM": "Backend developer specialized in scalable architectures...",
+  "rights": "All rights reserved",
   "frontend": "Frontend",
   "backend": "Backend",
   "databases": "Databases",
@@ -23,5 +22,6 @@
   "seeGithub": "View on GitHub",
   "contactVia": "Contact me via",
   "projectsSection": "Projects Section",
-  "technologiesSection": "Technologies Section"
+  "technologiesSection": "Technologies Section",
+  "sobreM": "I am Edgar Alfredo Rivera Díaz, a full-stack developer with experience in developing web applications and smart contracts on the blockchain networks of Solana and Ethereum. Passionate about technology and always seeking new ways to innovate and solve complex problems. I have participated in high-level hackathons, including the NASA SpaceApps Challenge and events focused on blockchain and artificial intelligence, which has allowed me to expand my knowledge and skills in programming and software development."
 }
